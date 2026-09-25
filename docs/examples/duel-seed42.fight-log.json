@@ -1,0 +1,2899 @@
+{
+  "schema": "autonomous-combat-sim.fight-log.v1",
+  "generatedAt": "2026-09-25T07:26:02.972Z",
+  "seed": 42,
+  "tickSeconds": 0.05,
+  "setting": {
+    "mapId": "alley",
+    "description": "Narrow alley: two connected approaches, fighters start in the north node (front vs mid)."
+  },
+  "narratorInstructions": "You are narrating a combat that already happened. The simulation is the sole source of truth. Do not invent hits, misses, wounds, locations, armor results, displacements, morale breaks, deaths, or winners that are not supported by this log. You may dramatize tone, sensory detail, pacing, and character voice, but every factual claim must map to an event, cast fact, or outcome field. Prefer chronological storytelling that follows the timeline / beatSheet. When an attack misses, say so; do not upgrade misses into glancing hits. When armor deflects or stops a blow, reflect that — trauma without penetration is still real if the log records a wound or blunt transfer. Incapacitation, rout (fleeing from broken morale), and death are distinct endings; use the outcome.reason field. Ids in events (actorId / targetId) match cast[].id; use cast[].name in prose. Ignore tick_meta / low-level physiology chatter unless it clarifies a major capability loss already listed in beats.",
+  "cast": [
+    {
+      "id": "aldren",
+      "name": "Aldren",
+      "attributes": {
+        "STR": 12,
+        "DEX": 13,
+        "AGI": 12,
+        "END": 11,
+        "WIL": 12,
+        "PER": 11
+      },
+      "skills": {
+        "sword": 3,
+        "spear": 1,
+        "dodge": 2,
+        "parry": 3
+      },
+      "heightM": 1.78,
+      "massKg": 80,
+      "weapon": {
+        "id": "longsword",
+        "name": "Longsword",
+        "lengthM": 1.15,
+        "modes": [
+          "cut",
+          "thrust",
+          "pommel"
+        ]
+      },
+      "armor": [
+        {
+          "id": "leather",
+          "name": "leather armor",
+          "structure": 1,
+          "coverage": 0.9
+        }
+      ],
+      "startingPlacement": {
+        "nodeId": "alley_north",
+        "slot": "front",
+        "facing": "S"
+      },
+      "startingMorale": 78,
+      "temperament": 0.2
+    },
+    {
+      "id": "harvek",
+      "name": "Harvek",
+      "attributes": {
+        "STR": 14,
+        "DEX": 11,
+        "AGI": 11,
+        "END": 13,
+        "WIL": 10,
+        "PER": 10
+      },
+      "skills": {
+        "spear": 3,
+        "sword": 1,
+        "dodge": 2,
+        "parry": 2
+      },
+      "heightM": 1.85,
+      "massKg": 88,
+      "weapon": {
+        "id": "spear",
+        "name": "Spear",
+        "lengthM": 2,
+        "modes": [
+          "thrust",
+          "cut"
+        ]
+      },
+      "armor": [
+        {
+          "id": "gambeson",
+          "name": "padded underlayer",
+          "structure": 0.9,
+          "coverage": 0.95
+        },
+        {
+          "id": "mail",
+          "name": "mail",
+          "structure": 1.1,
+          "coverage": 0.88
+        }
+      ],
+      "startingPlacement": {
+        "nodeId": "alley_north",
+        "slot": "mid",
+        "facing": "N"
+      },
+      "startingMorale": 72,
+      "temperament": 0.3
+    }
+  ],
+  "outcome": {
+    "winnerId": "harvek",
+    "winnerName": "Harvek",
+    "reason": "rout",
+    "ticks": 132,
+    "durationSeconds": 6.6000000000000005
+  },
+  "finalStates": [
+    {
+      "id": "aldren",
+      "name": "Aldren",
+      "dead": false,
+      "incapacitated": false,
+      "morale": 18.129789719532145,
+      "moraleBand": "routing",
+      "functions": {
+        "STANCE": 0.6900095801962829,
+        "GRASP": 0.6928900152112318,
+        "LOCOMOTION": 0.6814105654393707,
+        "SIGHT": 1,
+        "BREATHING": 0.5591496102125028,
+        "CIRCULATION": 0.5745101296044686,
+        "CONSCIOUSNESS": 1
+      },
+      "placement": {
+        "nodeId": "alley_north",
+        "slot": "front",
+        "facing": "S"
+      }
+    },
+    {
+      "id": "harvek",
+      "name": "Harvek",
+      "dead": false,
+      "incapacitated": false,
+      "morale": 57.821171908163215,
+      "moraleBand": "steady",
+      "functions": {
+        "STANCE": 0.8889620977403979,
+        "GRASP": 0.8420768906185394,
+        "LOCOMOTION": 0.890719841619493,
+        "SIGHT": 1,
+        "BREATHING": 1,
+        "CIRCULATION": 0.7551200962474481,
+        "CONSCIOUSNESS": 1
+      },
+      "placement": {
+        "nodeId": "alley_north",
+        "slot": "mid",
+        "facing": "N"
+      }
+    }
+  ],
+  "beatSheet": [
+    {
+      "timeS": 0,
+      "tick": 0,
+      "type": "commit",
+      "summary": "Aldren commits pommel against Harvek (aim auto)",
+      "actorId": "aldren",
+      "targetId": "harvek",
+      "tags": [
+        "attack_commit"
+      ]
+    },
+    {
+      "timeS": 0,
+      "tick": 0,
+      "type": "miss",
+      "summary": "Aldren misses Harvek with pommel (margin -1)",
+      "actorId": "aldren",
+      "targetId": "harvek",
+      "tags": [
+        "attack_miss"
+      ]
+    },
+    {
+      "timeS": 0,
+      "tick": 0,
+      "type": "commit",
+      "summary": "Harvek commits thrust against Aldren (aim auto)",
+      "actorId": "harvek",
+      "targetId": "aldren",
+      "tags": [
+        "attack_commit"
+      ]
+    },
+    {
+      "timeS": 0,
+      "tick": 0,
+      "type": "miss",
+      "summary": "Harvek misses Aldren with thrust (margin 0)",
+      "actorId": "harvek",
+      "targetId": "aldren",
+      "tags": [
+        "attack_miss"
+      ]
+    },
+    {
+      "timeS": 0.4,
+      "tick": 8,
+      "type": "commit",
+      "summary": "Aldren commits pommel against Harvek (aim auto)",
+      "actorId": "aldren",
+      "targetId": "harvek",
+      "tags": [
+        "attack_commit"
+      ]
+    },
+    {
+      "timeS": 0.4,
+      "tick": 8,
+      "type": "miss",
+      "summary": "Aldren misses Harvek with pommel (margin -2)",
+      "actorId": "aldren",
+      "targetId": "harvek",
+      "tags": [
+        "attack_miss"
+      ]
+    },
+    {
+      "timeS": 0.55,
+      "tick": 11,
+      "type": "commit",
+      "summary": "Harvek commits thrust against Aldren (aim auto)",
+      "actorId": "harvek",
+      "targetId": "aldren",
+      "tags": [
+        "attack_commit"
+      ]
+    },
+    {
+      "timeS": 0.55,
+      "tick": 11,
+      "type": "attack",
+      "summary": "Harvek hits Aldren l_hand with thrust (graze, overwhelm, margin 1)",
+      "actorId": "harvek",
+      "targetId": "aldren",
+      "tags": [
+        "attack_hit",
+        "armor_penetrate",
+        "wound"
+      ]
+    },
+    {
+      "timeS": 0.55,
+      "tick": 11,
+      "type": "wound",
+      "summary": "Aldren wounded at l_hand (energy 60.1)",
+      "actorId": "harvek",
+      "targetId": "aldren",
+      "tags": [
+        "wound"
+      ]
+    },
+    {
+      "timeS": 0.8,
+      "tick": 16,
+      "type": "commit",
+      "summary": "Aldren commits pommel against Harvek (aim auto)",
+      "actorId": "aldren",
+      "targetId": "harvek",
+      "tags": [
+        "attack_commit"
+      ]
+    },
+    {
+      "timeS": 0.8,
+      "tick": 16,
+      "type": "attack",
+      "summary": "Aldren hits Harvek abdomen with pommel (clean, nearPenet, margin 3)",
+      "actorId": "aldren",
+      "targetId": "harvek",
+      "tags": [
+        "attack_hit",
+        "armor_deflect",
+        "wound"
+      ]
+    },
+    {
+      "timeS": 0.8,
+      "tick": 16,
+      "type": "wound",
+      "summary": "Harvek wounded at abdomen (energy 3.6)",
+      "actorId": "aldren",
+      "targetId": "harvek",
+      "tags": [
+        "wound"
+      ]
+    },
+    {
+      "timeS": 1.1,
+      "tick": 22,
+      "type": "commit",
+      "summary": "Harvek commits thrust against Aldren (aim auto)",
+      "actorId": "harvek",
+      "targetId": "aldren",
+      "tags": [
+        "attack_commit"
+      ]
+    },
+    {
+      "timeS": 1.1,
+      "tick": 22,
+      "type": "miss",
+      "summary": "Harvek misses Aldren with thrust (margin 0)",
+      "actorId": "harvek",
+      "targetId": "aldren",
+      "tags": [
+        "attack_miss"
+      ]
+    },
+    {
+      "timeS": 1.2000000000000002,
+      "tick": 24,
+      "type": "commit",
+      "summary": "Aldren commits pommel against Harvek (aim auto)",
+      "actorId": "aldren",
+      "targetId": "harvek",
+      "tags": [
+        "attack_commit"
+      ]
+    },
+    {
+      "timeS": 1.2000000000000002,
+      "tick": 24,
+      "type": "miss",
+      "summary": "Aldren misses Harvek with pommel (margin -1)",
+      "actorId": "aldren",
+      "targetId": "harvek",
+      "tags": [
+        "attack_miss"
+      ]
+    },
+    {
+      "timeS": 1.6,
+      "tick": 32,
+      "type": "commit",
+      "summary": "Aldren commits thrust against Harvek (aim auto)",
+      "actorId": "aldren",
+      "targetId": "harvek",
+      "tags": [
+        "attack_commit"
+      ]
+    },
+    {
+      "timeS": 1.6,
+      "tick": 32,
+      "type": "miss",
+      "summary": "Aldren misses Harvek with thrust (margin 0)",
+      "actorId": "aldren",
+      "targetId": "harvek",
+      "tags": [
+        "attack_miss"
+      ]
+    },
+    {
+      "timeS": 1.6500000000000001,
+      "tick": 33,
+      "type": "commit",
+      "summary": "Harvek commits thrust against Aldren (aim auto)",
+      "actorId": "harvek",
+      "targetId": "aldren",
+      "tags": [
+        "attack_commit"
+      ]
+    },
+    {
+      "timeS": 1.6500000000000001,
+      "tick": 33,
+      "type": "miss",
+      "summary": "Harvek misses Aldren with thrust (margin 0)",
+      "actorId": "harvek",
+      "targetId": "aldren",
+      "tags": [
+        "attack_miss"
+      ]
+    },
+    {
+      "timeS": 2.1,
+      "tick": 42,
+      "type": "commit",
+      "summary": "Aldren commits pommel against Harvek (aim auto)",
+      "actorId": "aldren",
+      "targetId": "harvek",
+      "tags": [
+        "attack_commit"
+      ]
+    },
+    {
+      "timeS": 2.1,
+      "tick": 42,
+      "type": "miss",
+      "summary": "Aldren misses Harvek with pommel (margin 0)",
+      "actorId": "aldren",
+      "targetId": "harvek",
+      "tags": [
+        "attack_miss"
+      ]
+    },
+    {
+      "timeS": 2.2,
+      "tick": 44,
+      "type": "commit",
+      "summary": "Harvek commits thrust against Aldren (aim auto)",
+      "actorId": "harvek",
+      "targetId": "aldren",
+      "tags": [
+        "attack_commit"
+      ]
+    },
+    {
+      "timeS": 2.2,
+      "tick": 44,
+      "type": "miss",
+      "summary": "Harvek misses Aldren with thrust (margin 0)",
+      "actorId": "harvek",
+      "targetId": "aldren",
+      "tags": [
+        "attack_miss"
+      ]
+    },
+    {
+      "timeS": 2.5,
+      "tick": 50,
+      "type": "commit",
+      "summary": "Aldren commits pommel against Harvek (aim auto)",
+      "actorId": "aldren",
+      "targetId": "harvek",
+      "tags": [
+        "attack_commit"
+      ]
+    },
+    {
+      "timeS": 2.5,
+      "tick": 50,
+      "type": "miss",
+      "summary": "Aldren misses Harvek with pommel (margin 0)",
+      "actorId": "aldren",
+      "targetId": "harvek",
+      "tags": [
+        "attack_miss"
+      ]
+    },
+    {
+      "timeS": 2.75,
+      "tick": 55,
+      "type": "commit",
+      "summary": "Harvek commits thrust against Aldren (aim auto)",
+      "actorId": "harvek",
+      "targetId": "aldren",
+      "tags": [
+        "attack_commit"
+      ]
+    },
+    {
+      "timeS": 2.75,
+      "tick": 55,
+      "type": "miss",
+      "summary": "Harvek misses Aldren with thrust (margin -2)",
+      "actorId": "harvek",
+      "targetId": "aldren",
+      "tags": [
+        "attack_miss"
+      ]
+    },
+    {
+      "timeS": 2.9000000000000004,
+      "tick": 58,
+      "type": "commit",
+      "summary": "Aldren commits pommel against Harvek (aim auto)",
+      "actorId": "aldren",
+      "targetId": "harvek",
+      "tags": [
+        "attack_commit"
+      ]
+    },
+    {
+      "timeS": 2.9000000000000004,
+      "tick": 58,
+      "type": "miss",
+      "summary": "Aldren misses Harvek with pommel (margin 0)",
+      "actorId": "aldren",
+      "targetId": "harvek",
+      "tags": [
+        "attack_miss"
+      ]
+    },
+    {
+      "timeS": 3.3000000000000003,
+      "tick": 66,
+      "type": "commit",
+      "summary": "Aldren commits pommel against Harvek (aim auto)",
+      "actorId": "aldren",
+      "targetId": "harvek",
+      "tags": [
+        "attack_commit"
+      ]
+    },
+    {
+      "timeS": 3.3000000000000003,
+      "tick": 66,
+      "type": "attack",
+      "summary": "Aldren hits Harvek l_upper_arm with pommel (graze, nearPenet, margin 1)",
+      "actorId": "aldren",
+      "targetId": "harvek",
+      "tags": [
+        "attack_hit",
+        "armor_deflect",
+        "wound"
+      ]
+    },
+    {
+      "timeS": 3.3000000000000003,
+      "tick": 66,
+      "type": "wound",
+      "summary": "Harvek wounded at l_upper_arm (energy 3.5)",
+      "actorId": "aldren",
+      "targetId": "harvek",
+      "tags": [
+        "wound"
+      ]
+    },
+    {
+      "timeS": 3.3000000000000003,
+      "tick": 66,
+      "type": "commit",
+      "summary": "Harvek commits thrust against Aldren (aim auto)",
+      "actorId": "harvek",
+      "targetId": "aldren",
+      "tags": [
+        "attack_commit"
+      ]
+    },
+    {
+      "timeS": 3.3000000000000003,
+      "tick": 66,
+      "type": "miss",
+      "summary": "Harvek misses Aldren with thrust (margin -3)",
+      "actorId": "harvek",
+      "targetId": "aldren",
+      "tags": [
+        "attack_miss"
+      ]
+    },
+    {
+      "timeS": 3.7,
+      "tick": 74,
+      "type": "commit",
+      "summary": "Aldren commits pommel against Harvek (aim auto)",
+      "actorId": "aldren",
+      "targetId": "harvek",
+      "tags": [
+        "attack_commit"
+      ]
+    },
+    {
+      "timeS": 3.7,
+      "tick": 74,
+      "type": "miss",
+      "summary": "Aldren misses Harvek with pommel (margin 0)",
+      "actorId": "aldren",
+      "targetId": "harvek",
+      "tags": [
+        "attack_miss"
+      ]
+    },
+    {
+      "timeS": 3.85,
+      "tick": 77,
+      "type": "commit",
+      "summary": "Harvek commits thrust against Aldren (aim auto)",
+      "actorId": "harvek",
+      "targetId": "aldren",
+      "tags": [
+        "attack_commit"
+      ]
+    },
+    {
+      "timeS": 3.85,
+      "tick": 77,
+      "type": "attack",
+      "summary": "Harvek hits Aldren chest with thrust (graze, overwhelm, margin 1)",
+      "actorId": "harvek",
+      "targetId": "aldren",
+      "tags": [
+        "attack_hit",
+        "armor_penetrate",
+        "wound"
+      ]
+    },
+    {
+      "timeS": 3.85,
+      "tick": 77,
+      "type": "wound",
+      "summary": "Aldren wounded at chest (energy 60.1)",
+      "actorId": "harvek",
+      "targetId": "aldren",
+      "tags": [
+        "wound"
+      ]
+    },
+    {
+      "timeS": 4.1000000000000005,
+      "tick": 82,
+      "type": "commit",
+      "summary": "Aldren commits thrust against Harvek (aim auto)",
+      "actorId": "aldren",
+      "targetId": "harvek",
+      "tags": [
+        "attack_commit"
+      ]
+    },
+    {
+      "timeS": 4.1000000000000005,
+      "tick": 82,
+      "type": "miss",
+      "summary": "Aldren misses Harvek with thrust (margin -2)",
+      "actorId": "aldren",
+      "targetId": "harvek",
+      "tags": [
+        "attack_miss"
+      ]
+    },
+    {
+      "timeS": 4.4,
+      "tick": 88,
+      "type": "commit",
+      "summary": "Harvek commits thrust against Aldren (aim auto)",
+      "actorId": "harvek",
+      "targetId": "aldren",
+      "tags": [
+        "attack_commit"
+      ]
+    },
+    {
+      "timeS": 4.4,
+      "tick": 88,
+      "type": "miss",
+      "summary": "Harvek misses Aldren with thrust (margin -2)",
+      "actorId": "harvek",
+      "targetId": "aldren",
+      "tags": [
+        "attack_miss"
+      ]
+    },
+    {
+      "timeS": 4.6000000000000005,
+      "tick": 92,
+      "type": "commit",
+      "summary": "Aldren commits thrust against Harvek (aim auto)",
+      "actorId": "aldren",
+      "targetId": "harvek",
+      "tags": [
+        "attack_commit"
+      ]
+    },
+    {
+      "timeS": 4.6000000000000005,
+      "tick": 92,
+      "type": "miss",
+      "summary": "Aldren misses Harvek with thrust (margin -1)",
+      "actorId": "aldren",
+      "targetId": "harvek",
+      "tags": [
+        "attack_miss"
+      ]
+    },
+    {
+      "timeS": 4.95,
+      "tick": 99,
+      "type": "commit",
+      "summary": "Harvek commits thrust against Aldren (aim auto)",
+      "actorId": "harvek",
+      "targetId": "aldren",
+      "tags": [
+        "attack_commit"
+      ]
+    },
+    {
+      "timeS": 4.95,
+      "tick": 99,
+      "type": "attack",
+      "summary": "Harvek hits Aldren l_lower_leg with thrust (graze, overwhelm, margin 1)",
+      "actorId": "harvek",
+      "targetId": "aldren",
+      "tags": [
+        "attack_hit",
+        "armor_penetrate",
+        "wound"
+      ]
+    },
+    {
+      "timeS": 4.95,
+      "tick": 99,
+      "type": "wound",
+      "summary": "Aldren wounded at l_lower_leg (energy 60.1)",
+      "actorId": "harvek",
+      "targetId": "aldren",
+      "tags": [
+        "wound"
+      ]
+    },
+    {
+      "timeS": 5.1000000000000005,
+      "tick": 102,
+      "type": "commit",
+      "summary": "Aldren commits pommel against Harvek (aim auto)",
+      "actorId": "aldren",
+      "targetId": "harvek",
+      "tags": [
+        "attack_commit"
+      ]
+    },
+    {
+      "timeS": 5.1000000000000005,
+      "tick": 102,
+      "type": "attack",
+      "summary": "Aldren hits Harvek l_thigh with pommel (solid, partial, margin 2)",
+      "actorId": "aldren",
+      "targetId": "harvek",
+      "tags": [
+        "attack_hit",
+        "armor_penetrate",
+        "wound"
+      ]
+    },
+    {
+      "timeS": 5.1000000000000005,
+      "tick": 102,
+      "type": "wound",
+      "summary": "Harvek wounded at l_thigh (energy 10.9)",
+      "actorId": "aldren",
+      "targetId": "harvek",
+      "tags": [
+        "wound"
+      ]
+    },
+    {
+      "timeS": 5.5,
+      "tick": 110,
+      "type": "commit",
+      "summary": "Aldren commits thrust against Harvek (aim auto)",
+      "actorId": "aldren",
+      "targetId": "harvek",
+      "tags": [
+        "attack_commit"
+      ]
+    },
+    {
+      "timeS": 5.5,
+      "tick": 110,
+      "type": "miss",
+      "summary": "Aldren misses Harvek with thrust (margin -1)",
+      "actorId": "aldren",
+      "targetId": "harvek",
+      "tags": [
+        "attack_miss"
+      ]
+    },
+    {
+      "timeS": 5.5,
+      "tick": 110,
+      "type": "commit",
+      "summary": "Harvek commits thrust against Aldren (aim auto)",
+      "actorId": "harvek",
+      "targetId": "aldren",
+      "tags": [
+        "attack_commit"
+      ]
+    },
+    {
+      "timeS": 5.5,
+      "tick": 110,
+      "type": "attack",
+      "summary": "Harvek hits Aldren l_thigh with thrust (solid, overwhelm, margin 2)",
+      "actorId": "harvek",
+      "targetId": "aldren",
+      "tags": [
+        "attack_hit",
+        "armor_penetrate",
+        "wound"
+      ]
+    },
+    {
+      "timeS": 5.5,
+      "tick": 110,
+      "type": "wound",
+      "summary": "Aldren wounded at l_thigh (energy 63.3)",
+      "actorId": "harvek",
+      "targetId": "aldren",
+      "tags": [
+        "wound"
+      ]
+    },
+    {
+      "timeS": 6,
+      "tick": 120,
+      "type": "commit",
+      "summary": "Aldren commits thrust against Harvek (aim auto)",
+      "actorId": "aldren",
+      "targetId": "harvek",
+      "tags": [
+        "attack_commit"
+      ]
+    },
+    {
+      "timeS": 6,
+      "tick": 120,
+      "type": "miss",
+      "summary": "Aldren misses Harvek with thrust (margin 0)",
+      "actorId": "aldren",
+      "targetId": "harvek",
+      "tags": [
+        "attack_miss"
+      ]
+    },
+    {
+      "timeS": 6.050000000000001,
+      "tick": 121,
+      "type": "commit",
+      "summary": "Harvek commits thrust against Aldren (aim auto)",
+      "actorId": "harvek",
+      "targetId": "aldren",
+      "tags": [
+        "attack_commit"
+      ]
+    },
+    {
+      "timeS": 6.050000000000001,
+      "tick": 121,
+      "type": "miss",
+      "summary": "Harvek misses Aldren with thrust (margin -2)",
+      "actorId": "harvek",
+      "targetId": "aldren",
+      "tags": [
+        "attack_miss"
+      ]
+    },
+    {
+      "timeS": 6.5,
+      "tick": 130,
+      "type": "commit",
+      "summary": "Aldren commits thrust against Harvek (aim auto)",
+      "actorId": "aldren",
+      "targetId": "harvek",
+      "tags": [
+        "attack_commit"
+      ]
+    },
+    {
+      "timeS": 6.5,
+      "tick": 130,
+      "type": "attack",
+      "summary": "Aldren hits Harvek r_thigh with thrust (solid, overwhelm, margin 2)",
+      "actorId": "aldren",
+      "targetId": "harvek",
+      "tags": [
+        "attack_hit",
+        "armor_penetrate",
+        "wound"
+      ]
+    },
+    {
+      "timeS": 6.5,
+      "tick": 130,
+      "type": "wound",
+      "summary": "Harvek wounded at r_thigh (energy 43.0)",
+      "actorId": "aldren",
+      "targetId": "harvek",
+      "tags": [
+        "wound"
+      ]
+    },
+    {
+      "timeS": 6.6000000000000005,
+      "tick": 132,
+      "type": "commit",
+      "summary": "Harvek commits thrust against Aldren (aim auto)",
+      "actorId": "harvek",
+      "targetId": "aldren",
+      "tags": [
+        "attack_commit"
+      ]
+    },
+    {
+      "timeS": 6.6000000000000005,
+      "tick": 132,
+      "type": "attack",
+      "summary": "Harvek hits Aldren r_hand with thrust (clean, overwhelm, margin 3)",
+      "actorId": "harvek",
+      "targetId": "aldren",
+      "tags": [
+        "attack_hit",
+        "armor_penetrate",
+        "wound"
+      ]
+    },
+    {
+      "timeS": 6.6000000000000005,
+      "tick": 132,
+      "type": "wound",
+      "summary": "Aldren wounded at r_hand (energy 63.3)",
+      "actorId": "harvek",
+      "targetId": "aldren",
+      "tags": [
+        "wound"
+      ]
+    },
+    {
+      "timeS": 6.6000000000000005,
+      "tick": 132,
+      "type": "end",
+      "summary": "Fight ends: winner=harvek, reason=rout",
+      "tags": [
+        "duel_end"
+      ]
+    }
+  ],
+  "timeline": [
+    {
+      "tick": 0,
+      "timeS": 0,
+      "type": "commit",
+      "actorId": "aldren",
+      "targetId": "harvek",
+      "tags": [
+        "attack_commit"
+      ],
+      "data": {
+        "mode": "pommel",
+        "aim": "auto"
+      }
+    },
+    {
+      "tick": 0,
+      "timeS": 0,
+      "type": "miss",
+      "actorId": "aldren",
+      "targetId": "harvek",
+      "tags": [
+        "attack_miss"
+      ],
+      "data": {
+        "mode": "pommel",
+        "margin": -1,
+        "attackSuccesses": 1,
+        "defenseSuccesses": 2,
+        "attackPool": 6,
+        "defensePool": 5
+      }
+    },
+    {
+      "tick": 0,
+      "timeS": 0,
+      "type": "commit",
+      "actorId": "harvek",
+      "targetId": "aldren",
+      "tags": [
+        "attack_commit"
+      ],
+      "data": {
+        "mode": "thrust",
+        "aim": "auto"
+      }
+    },
+    {
+      "tick": 0,
+      "timeS": 0,
+      "type": "miss",
+      "actorId": "harvek",
+      "targetId": "aldren",
+      "tags": [
+        "attack_miss"
+      ],
+      "data": {
+        "mode": "thrust",
+        "margin": 0,
+        "attackSuccesses": 1,
+        "defenseSuccesses": 1,
+        "attackPool": 6,
+        "defensePool": 6
+      }
+    },
+    {
+      "tick": 8,
+      "timeS": 0.4,
+      "type": "commit",
+      "actorId": "aldren",
+      "targetId": "harvek",
+      "tags": [
+        "attack_commit"
+      ],
+      "data": {
+        "mode": "pommel",
+        "aim": "auto"
+      }
+    },
+    {
+      "tick": 8,
+      "timeS": 0.4,
+      "type": "miss",
+      "actorId": "aldren",
+      "targetId": "harvek",
+      "tags": [
+        "attack_miss"
+      ],
+      "data": {
+        "mode": "pommel",
+        "margin": -2,
+        "attackSuccesses": 0,
+        "defenseSuccesses": 2,
+        "attackPool": 6,
+        "defensePool": 5
+      }
+    },
+    {
+      "tick": 11,
+      "timeS": 0.55,
+      "type": "commit",
+      "actorId": "harvek",
+      "targetId": "aldren",
+      "tags": [
+        "attack_commit"
+      ],
+      "data": {
+        "mode": "thrust",
+        "aim": "auto"
+      }
+    },
+    {
+      "tick": 11,
+      "timeS": 0.55,
+      "type": "attack",
+      "actorId": "harvek",
+      "targetId": "aldren",
+      "tags": [
+        "attack_hit",
+        "armor_penetrate",
+        "wound"
+      ],
+      "data": {
+        "mode": "thrust",
+        "margin": 1,
+        "marginBand": "graze",
+        "partId": "l_hand",
+        "zone": "middle",
+        "sizeMod": 0,
+        "energy": 47.597352048215576,
+        "momentum": 10.688014077260442,
+        "penBand": "overwhelm",
+        "penRatio": 3.778,
+        "transmitted": 60.14,
+        "bluntTrauma": 3.17,
+        "tissuesHit": [
+          {
+            "kind": "skin",
+            "before": 1,
+            "after": 0.5811774832739052
+          },
+          {
+            "kind": "fat",
+            "before": 1,
+            "after": 0.5811774832739052
+          },
+          {
+            "kind": "muscle",
+            "before": 1,
+            "after": 0.6300123664753743
+          },
+          {
+            "kind": "tendon",
+            "before": 1,
+            "after": 0.5811774832739052
+          },
+          {
+            "kind": "bone",
+            "before": 1,
+            "after": 0.6079060407463142
+          },
+          {
+            "kind": "nerve",
+            "before": 1,
+            "after": 0.5811774832739052
+          }
+        ],
+        "displacement": null,
+        "stagger": false
+      }
+    },
+    {
+      "tick": 11,
+      "timeS": 0.55,
+      "type": "wound",
+      "actorId": "harvek",
+      "targetId": "aldren",
+      "tags": [
+        "wound"
+      ],
+      "data": {
+        "partId": "l_hand",
+        "energy": 60.139254312920386,
+        "tissuesHit": [
+          {
+            "kind": "skin",
+            "before": 1,
+            "after": 0.5811774832739052
+          },
+          {
+            "kind": "fat",
+            "before": 1,
+            "after": 0.5811774832739052
+          },
+          {
+            "kind": "muscle",
+            "before": 1,
+            "after": 0.6300123664753743
+          },
+          {
+            "kind": "tendon",
+            "before": 1,
+            "after": 0.5811774832739052
+          },
+          {
+            "kind": "bone",
+            "before": 1,
+            "after": 0.6079060407463142
+          },
+          {
+            "kind": "nerve",
+            "before": 1,
+            "after": 0.5811774832739052
+          }
+        ]
+      }
+    },
+    {
+      "tick": 16,
+      "timeS": 0.8,
+      "type": "commit",
+      "actorId": "aldren",
+      "targetId": "harvek",
+      "tags": [
+        "attack_commit"
+      ],
+      "data": {
+        "mode": "pommel",
+        "aim": "auto"
+      }
+    },
+    {
+      "tick": 16,
+      "timeS": 0.8,
+      "type": "attack",
+      "actorId": "aldren",
+      "targetId": "harvek",
+      "tags": [
+        "attack_hit",
+        "armor_deflect",
+        "wound"
+      ],
+      "data": {
+        "mode": "pommel",
+        "margin": 3,
+        "marginBand": "clean",
+        "partId": "abdomen",
+        "zone": "middle",
+        "sizeMod": 0,
+        "energy": 26.933795474696325,
+        "momentum": 8.684159563777586,
+        "penBand": "nearPenet",
+        "penRatio": 0.998,
+        "transmitted": 3.64,
+        "bluntTrauma": 9.7,
+        "tissuesHit": [
+          {
+            "kind": "skin",
+            "before": 1,
+            "after": 0.44999999999999996
+          },
+          {
+            "kind": "fat",
+            "before": 1,
+            "after": 0.44999999999999996
+          },
+          {
+            "kind": "muscle",
+            "before": 1,
+            "after": 0.9347128130943115
+          },
+          {
+            "kind": "bone",
+            "before": 1,
+            "after": 0.9095024472050204
+          },
+          {
+            "kind": "vessel",
+            "before": 1,
+            "after": 0.7672920070986238
+          },
+          {
+            "kind": "organ",
+            "before": 1,
+            "after": 0.676794454303644
+          }
+        ],
+        "displacement": null,
+        "stagger": false
+      }
+    },
+    {
+      "tick": 16,
+      "timeS": 0.8,
+      "type": "wound",
+      "actorId": "aldren",
+      "targetId": "harvek",
+      "tags": [
+        "wound"
+      ],
+      "data": {
+        "partId": "abdomen",
+        "energy": 3.6360623890840036,
+        "tissuesHit": [
+          {
+            "kind": "skin",
+            "before": 1,
+            "after": 0.44999999999999996
+          },
+          {
+            "kind": "fat",
+            "before": 1,
+            "after": 0.44999999999999996
+          },
+          {
+            "kind": "muscle",
+            "before": 1,
+            "after": 0.9347128130943115
+          },
+          {
+            "kind": "bone",
+            "before": 1,
+            "after": 0.9095024472050204
+          },
+          {
+            "kind": "vessel",
+            "before": 1,
+            "after": 0.7672920070986238
+          },
+          {
+            "kind": "organ",
+            "before": 1,
+            "after": 0.676794454303644
+          }
+        ]
+      }
+    },
+    {
+      "tick": 20,
+      "timeS": 1,
+      "type": "physiology",
+      "actorId": "aldren",
+      "tags": [
+        "function_drop"
+      ],
+      "data": {
+        "tag": "GRASP",
+        "from": 1,
+        "to": 0.6928900152112318
+      }
+    },
+    {
+      "tick": 20,
+      "timeS": 1,
+      "type": "physiology",
+      "actorId": "harvek",
+      "tags": [
+        "function_drop"
+      ],
+      "data": {
+        "tag": "CIRCULATION",
+        "from": 1,
+        "to": 0.7551200962474481
+      }
+    },
+    {
+      "tick": 22,
+      "timeS": 1.1,
+      "type": "commit",
+      "actorId": "harvek",
+      "targetId": "aldren",
+      "tags": [
+        "attack_commit"
+      ],
+      "data": {
+        "mode": "thrust",
+        "aim": "auto"
+      }
+    },
+    {
+      "tick": 22,
+      "timeS": 1.1,
+      "type": "miss",
+      "actorId": "harvek",
+      "targetId": "aldren",
+      "tags": [
+        "attack_miss"
+      ],
+      "data": {
+        "mode": "thrust",
+        "margin": 0,
+        "attackSuccesses": 2,
+        "defenseSuccesses": 2,
+        "attackPool": 5,
+        "defensePool": 5
+      }
+    },
+    {
+      "tick": 24,
+      "timeS": 1.2000000000000002,
+      "type": "commit",
+      "actorId": "aldren",
+      "targetId": "harvek",
+      "tags": [
+        "attack_commit"
+      ],
+      "data": {
+        "mode": "pommel",
+        "aim": "auto"
+      }
+    },
+    {
+      "tick": 24,
+      "timeS": 1.2000000000000002,
+      "type": "miss",
+      "actorId": "aldren",
+      "targetId": "harvek",
+      "tags": [
+        "attack_miss"
+      ],
+      "data": {
+        "mode": "pommel",
+        "margin": -1,
+        "attackSuccesses": 0,
+        "defenseSuccesses": 1,
+        "attackPool": 4,
+        "defensePool": 4
+      }
+    },
+    {
+      "tick": 32,
+      "timeS": 1.6,
+      "type": "commit",
+      "actorId": "aldren",
+      "targetId": "harvek",
+      "tags": [
+        "attack_commit"
+      ],
+      "data": {
+        "mode": "thrust",
+        "aim": "auto"
+      }
+    },
+    {
+      "tick": 32,
+      "timeS": 1.6,
+      "type": "miss",
+      "actorId": "aldren",
+      "targetId": "harvek",
+      "tags": [
+        "attack_miss"
+      ],
+      "data": {
+        "mode": "thrust",
+        "margin": 0,
+        "attackSuccesses": 2,
+        "defenseSuccesses": 2,
+        "attackPool": 4,
+        "defensePool": 4
+      }
+    },
+    {
+      "tick": 33,
+      "timeS": 1.6500000000000001,
+      "type": "commit",
+      "actorId": "harvek",
+      "targetId": "aldren",
+      "tags": [
+        "attack_commit"
+      ],
+      "data": {
+        "mode": "thrust",
+        "aim": "auto"
+      }
+    },
+    {
+      "tick": 33,
+      "timeS": 1.6500000000000001,
+      "type": "miss",
+      "actorId": "harvek",
+      "targetId": "aldren",
+      "tags": [
+        "attack_miss"
+      ],
+      "data": {
+        "mode": "thrust",
+        "margin": 0,
+        "attackSuccesses": 2,
+        "defenseSuccesses": 2,
+        "attackPool": 5,
+        "defensePool": 5
+      }
+    },
+    {
+      "tick": 42,
+      "timeS": 2.1,
+      "type": "commit",
+      "actorId": "aldren",
+      "targetId": "harvek",
+      "tags": [
+        "attack_commit"
+      ],
+      "data": {
+        "mode": "pommel",
+        "aim": "auto"
+      }
+    },
+    {
+      "tick": 42,
+      "timeS": 2.1,
+      "type": "miss",
+      "actorId": "aldren",
+      "targetId": "harvek",
+      "tags": [
+        "attack_miss"
+      ],
+      "data": {
+        "mode": "pommel",
+        "margin": 0,
+        "attackSuccesses": 1,
+        "defenseSuccesses": 1,
+        "attackPool": 4,
+        "defensePool": 4
+      }
+    },
+    {
+      "tick": 44,
+      "timeS": 2.2,
+      "type": "commit",
+      "actorId": "harvek",
+      "targetId": "aldren",
+      "tags": [
+        "attack_commit"
+      ],
+      "data": {
+        "mode": "thrust",
+        "aim": "auto"
+      }
+    },
+    {
+      "tick": 44,
+      "timeS": 2.2,
+      "type": "miss",
+      "actorId": "harvek",
+      "targetId": "aldren",
+      "tags": [
+        "attack_miss"
+      ],
+      "data": {
+        "mode": "thrust",
+        "margin": 0,
+        "attackSuccesses": 1,
+        "defenseSuccesses": 1,
+        "attackPool": 5,
+        "defensePool": 5
+      }
+    },
+    {
+      "tick": 50,
+      "timeS": 2.5,
+      "type": "commit",
+      "actorId": "aldren",
+      "targetId": "harvek",
+      "tags": [
+        "attack_commit"
+      ],
+      "data": {
+        "mode": "pommel",
+        "aim": "auto"
+      }
+    },
+    {
+      "tick": 50,
+      "timeS": 2.5,
+      "type": "miss",
+      "actorId": "aldren",
+      "targetId": "harvek",
+      "tags": [
+        "attack_miss"
+      ],
+      "data": {
+        "mode": "pommel",
+        "margin": 0,
+        "attackSuccesses": 2,
+        "defenseSuccesses": 2,
+        "attackPool": 4,
+        "defensePool": 4
+      }
+    },
+    {
+      "tick": 55,
+      "timeS": 2.75,
+      "type": "commit",
+      "actorId": "harvek",
+      "targetId": "aldren",
+      "tags": [
+        "attack_commit"
+      ],
+      "data": {
+        "mode": "thrust",
+        "aim": "auto"
+      }
+    },
+    {
+      "tick": 55,
+      "timeS": 2.75,
+      "type": "miss",
+      "actorId": "harvek",
+      "targetId": "aldren",
+      "tags": [
+        "attack_miss"
+      ],
+      "data": {
+        "mode": "thrust",
+        "margin": -2,
+        "attackSuccesses": 1,
+        "defenseSuccesses": 3,
+        "attackPool": 5,
+        "defensePool": 5
+      }
+    },
+    {
+      "tick": 58,
+      "timeS": 2.9000000000000004,
+      "type": "commit",
+      "actorId": "aldren",
+      "targetId": "harvek",
+      "tags": [
+        "attack_commit"
+      ],
+      "data": {
+        "mode": "pommel",
+        "aim": "auto"
+      }
+    },
+    {
+      "tick": 58,
+      "timeS": 2.9000000000000004,
+      "type": "miss",
+      "actorId": "aldren",
+      "targetId": "harvek",
+      "tags": [
+        "attack_miss"
+      ],
+      "data": {
+        "mode": "pommel",
+        "margin": 0,
+        "attackSuccesses": 3,
+        "defenseSuccesses": 3,
+        "attackPool": 4,
+        "defensePool": 4
+      }
+    },
+    {
+      "tick": 66,
+      "timeS": 3.3000000000000003,
+      "type": "commit",
+      "actorId": "aldren",
+      "targetId": "harvek",
+      "tags": [
+        "attack_commit"
+      ],
+      "data": {
+        "mode": "pommel",
+        "aim": "auto"
+      }
+    },
+    {
+      "tick": 66,
+      "timeS": 3.3000000000000003,
+      "type": "attack",
+      "actorId": "aldren",
+      "targetId": "harvek",
+      "tags": [
+        "attack_hit",
+        "armor_deflect",
+        "wound"
+      ],
+      "data": {
+        "mode": "pommel",
+        "margin": 1,
+        "marginBand": "graze",
+        "partId": "l_upper_arm",
+        "zone": "high",
+        "sizeMod": 0,
+        "energy": 26.933795474696325,
+        "momentum": 8.684159563777586,
+        "penBand": "nearPenet",
+        "penRatio": 0.932,
+        "transmitted": 3.45,
+        "bluntTrauma": 9.21,
+        "tissuesHit": [
+          {
+            "kind": "skin",
+            "before": 1,
+            "after": 0.44999999999999996
+          },
+          {
+            "kind": "fat",
+            "before": 1,
+            "after": 0.44999999999999996
+          },
+          {
+            "kind": "muscle",
+            "before": 1,
+            "after": 0.9461404377457184
+          },
+          {
+            "kind": "bone",
+            "before": 1,
+            "after": 0.9140273248447693
+          },
+          {
+            "kind": "nerve",
+            "before": 1,
+            "after": 0.7789274067436925
+          },
+          {
+            "kind": "vessel",
+            "before": 1,
+            "after": 0.7789274067436925
+          }
+        ],
+        "displacement": null,
+        "stagger": false
+      }
+    },
+    {
+      "tick": 66,
+      "timeS": 3.3000000000000003,
+      "type": "wound",
+      "actorId": "aldren",
+      "targetId": "harvek",
+      "tags": [
+        "wound"
+      ],
+      "data": {
+        "partId": "l_upper_arm",
+        "energy": 3.454259269629804,
+        "tissuesHit": [
+          {
+            "kind": "skin",
+            "before": 1,
+            "after": 0.44999999999999996
+          },
+          {
+            "kind": "fat",
+            "before": 1,
+            "after": 0.44999999999999996
+          },
+          {
+            "kind": "muscle",
+            "before": 1,
+            "after": 0.9461404377457184
+          },
+          {
+            "kind": "bone",
+            "before": 1,
+            "after": 0.9140273248447693
+          },
+          {
+            "kind": "nerve",
+            "before": 1,
+            "after": 0.7789274067436925
+          },
+          {
+            "kind": "vessel",
+            "before": 1,
+            "after": 0.7789274067436925
+          }
+        ]
+      }
+    },
+    {
+      "tick": 66,
+      "timeS": 3.3000000000000003,
+      "type": "commit",
+      "actorId": "harvek",
+      "targetId": "aldren",
+      "tags": [
+        "attack_commit"
+      ],
+      "data": {
+        "mode": "thrust",
+        "aim": "auto"
+      }
+    },
+    {
+      "tick": 66,
+      "timeS": 3.3000000000000003,
+      "type": "miss",
+      "actorId": "harvek",
+      "targetId": "aldren",
+      "tags": [
+        "attack_miss"
+      ],
+      "data": {
+        "mode": "thrust",
+        "margin": -3,
+        "attackSuccesses": 0,
+        "defenseSuccesses": 3,
+        "attackPool": 5,
+        "defensePool": 5
+      }
+    },
+    {
+      "tick": 70,
+      "timeS": 3.5,
+      "type": "physiology",
+      "actorId": "harvek",
+      "tags": [
+        "function_drop"
+      ],
+      "data": {
+        "tag": "GRASP",
+        "from": 1,
+        "to": 0.8420768906185394
+      }
+    },
+    {
+      "tick": 74,
+      "timeS": 3.7,
+      "type": "commit",
+      "actorId": "aldren",
+      "targetId": "harvek",
+      "tags": [
+        "attack_commit"
+      ],
+      "data": {
+        "mode": "pommel",
+        "aim": "auto"
+      }
+    },
+    {
+      "tick": 74,
+      "timeS": 3.7,
+      "type": "miss",
+      "actorId": "aldren",
+      "targetId": "harvek",
+      "tags": [
+        "attack_miss"
+      ],
+      "data": {
+        "mode": "pommel",
+        "margin": 0,
+        "attackSuccesses": 0,
+        "defenseSuccesses": 0,
+        "attackPool": 4,
+        "defensePool": 4
+      }
+    },
+    {
+      "tick": 77,
+      "timeS": 3.85,
+      "type": "commit",
+      "actorId": "harvek",
+      "targetId": "aldren",
+      "tags": [
+        "attack_commit"
+      ],
+      "data": {
+        "mode": "thrust",
+        "aim": "auto"
+      }
+    },
+    {
+      "tick": 77,
+      "timeS": 3.85,
+      "type": "attack",
+      "actorId": "harvek",
+      "targetId": "aldren",
+      "tags": [
+        "attack_hit",
+        "armor_penetrate",
+        "wound"
+      ],
+      "data": {
+        "mode": "thrust",
+        "margin": 1,
+        "marginBand": "graze",
+        "partId": "chest",
+        "zone": "middle",
+        "sizeMod": 0,
+        "energy": 47.597352048215576,
+        "momentum": 10.688014077260442,
+        "penBand": "overwhelm",
+        "penRatio": 3.272,
+        "transmitted": 60.14,
+        "bluntTrauma": 3.17,
+        "tissuesHit": [
+          {
+            "kind": "skin",
+            "before": 1,
+            "after": 0.5811774832739052
+          },
+          {
+            "kind": "fat",
+            "before": 1,
+            "after": 0.5811774832739052
+          },
+          {
+            "kind": "muscle",
+            "before": 1,
+            "after": 0.6191601702083811
+          },
+          {
+            "kind": "bone",
+            "before": 1,
+            "after": 0.6017514386967463
+          },
+          {
+            "kind": "organ",
+            "before": 1,
+            "after": 0.44999999999999996
+          },
+          {
+            "kind": "organ",
+            "before": 1,
+            "after": 0.44999999999999996
+          },
+          {
+            "kind": "vessel",
+            "before": 1,
+            "after": 0.5811774832739052
+          }
+        ],
+        "displacement": null,
+        "stagger": false
+      }
+    },
+    {
+      "tick": 77,
+      "timeS": 3.85,
+      "type": "wound",
+      "actorId": "harvek",
+      "targetId": "aldren",
+      "tags": [
+        "wound"
+      ],
+      "data": {
+        "partId": "chest",
+        "energy": 60.139254312920386,
+        "tissuesHit": [
+          {
+            "kind": "skin",
+            "before": 1,
+            "after": 0.5811774832739052
+          },
+          {
+            "kind": "fat",
+            "before": 1,
+            "after": 0.5811774832739052
+          },
+          {
+            "kind": "muscle",
+            "before": 1,
+            "after": 0.6191601702083811
+          },
+          {
+            "kind": "bone",
+            "before": 1,
+            "after": 0.6017514386967463
+          },
+          {
+            "kind": "organ",
+            "before": 1,
+            "after": 0.44999999999999996
+          },
+          {
+            "kind": "organ",
+            "before": 1,
+            "after": 0.44999999999999996
+          },
+          {
+            "kind": "vessel",
+            "before": 1,
+            "after": 0.5811774832739052
+          }
+        ]
+      }
+    },
+    {
+      "tick": 80,
+      "timeS": 4,
+      "type": "physiology",
+      "actorId": "aldren",
+      "tags": [
+        "function_drop"
+      ],
+      "data": {
+        "tag": "BREATHING",
+        "from": 1,
+        "to": 0.5591496102125028
+      }
+    },
+    {
+      "tick": 80,
+      "timeS": 4,
+      "type": "physiology",
+      "actorId": "aldren",
+      "tags": [
+        "function_drop"
+      ],
+      "data": {
+        "tag": "CIRCULATION",
+        "from": 1,
+        "to": 0.5745101296044686
+      }
+    },
+    {
+      "tick": 82,
+      "timeS": 4.1000000000000005,
+      "type": "commit",
+      "actorId": "aldren",
+      "targetId": "harvek",
+      "tags": [
+        "attack_commit"
+      ],
+      "data": {
+        "mode": "thrust",
+        "aim": "auto"
+      }
+    },
+    {
+      "tick": 82,
+      "timeS": 4.1000000000000005,
+      "type": "miss",
+      "actorId": "aldren",
+      "targetId": "harvek",
+      "tags": [
+        "attack_miss"
+      ],
+      "data": {
+        "mode": "thrust",
+        "margin": -2,
+        "attackSuccesses": 0,
+        "defenseSuccesses": 2,
+        "attackPool": 4,
+        "defensePool": 4
+      }
+    },
+    {
+      "tick": 88,
+      "timeS": 4.4,
+      "type": "commit",
+      "actorId": "harvek",
+      "targetId": "aldren",
+      "tags": [
+        "attack_commit"
+      ],
+      "data": {
+        "mode": "thrust",
+        "aim": "auto"
+      }
+    },
+    {
+      "tick": 88,
+      "timeS": 4.4,
+      "type": "miss",
+      "actorId": "harvek",
+      "targetId": "aldren",
+      "tags": [
+        "attack_miss"
+      ],
+      "data": {
+        "mode": "thrust",
+        "margin": -2,
+        "attackSuccesses": 1,
+        "defenseSuccesses": 3,
+        "attackPool": 5,
+        "defensePool": 5
+      }
+    },
+    {
+      "tick": 92,
+      "timeS": 4.6000000000000005,
+      "type": "commit",
+      "actorId": "aldren",
+      "targetId": "harvek",
+      "tags": [
+        "attack_commit"
+      ],
+      "data": {
+        "mode": "thrust",
+        "aim": "auto"
+      }
+    },
+    {
+      "tick": 92,
+      "timeS": 4.6000000000000005,
+      "type": "miss",
+      "actorId": "aldren",
+      "targetId": "harvek",
+      "tags": [
+        "attack_miss"
+      ],
+      "data": {
+        "mode": "thrust",
+        "margin": -1,
+        "attackSuccesses": 1,
+        "defenseSuccesses": 2,
+        "attackPool": 4,
+        "defensePool": 4
+      }
+    },
+    {
+      "tick": 99,
+      "timeS": 4.95,
+      "type": "commit",
+      "actorId": "harvek",
+      "targetId": "aldren",
+      "tags": [
+        "attack_commit"
+      ],
+      "data": {
+        "mode": "thrust",
+        "aim": "auto"
+      }
+    },
+    {
+      "tick": 99,
+      "timeS": 4.95,
+      "type": "attack",
+      "actorId": "harvek",
+      "targetId": "aldren",
+      "tags": [
+        "attack_hit",
+        "armor_penetrate",
+        "wound"
+      ],
+      "data": {
+        "mode": "thrust",
+        "margin": 1,
+        "marginBand": "graze",
+        "partId": "l_lower_leg",
+        "zone": "veryLow",
+        "sizeMod": 0,
+        "energy": 47.597352048215576,
+        "momentum": 10.688014077260442,
+        "penBand": "overwhelm",
+        "penRatio": 56.974,
+        "transmitted": 60.14,
+        "bluntTrauma": 3.17,
+        "tissuesHit": [
+          {
+            "kind": "skin",
+            "before": 1,
+            "after": 0.5811774832739052
+          },
+          {
+            "kind": "fat",
+            "before": 1,
+            "after": 0.5811774832739052
+          },
+          {
+            "kind": "muscle",
+            "before": 1,
+            "after": 0.6300123664753743
+          },
+          {
+            "kind": "tendon",
+            "before": 1,
+            "after": 0.5811774832739052
+          },
+          {
+            "kind": "bone",
+            "before": 1,
+            "after": 0.6079060407463142
+          },
+          {
+            "kind": "vessel",
+            "before": 1,
+            "after": 0.5811774832739052
+          }
+        ],
+        "displacement": null,
+        "stagger": false
+      }
+    },
+    {
+      "tick": 99,
+      "timeS": 4.95,
+      "type": "wound",
+      "actorId": "harvek",
+      "targetId": "aldren",
+      "tags": [
+        "wound"
+      ],
+      "data": {
+        "partId": "l_lower_leg",
+        "energy": 60.139254312920386,
+        "tissuesHit": [
+          {
+            "kind": "skin",
+            "before": 1,
+            "after": 0.5811774832739052
+          },
+          {
+            "kind": "fat",
+            "before": 1,
+            "after": 0.5811774832739052
+          },
+          {
+            "kind": "muscle",
+            "before": 1,
+            "after": 0.6300123664753743
+          },
+          {
+            "kind": "tendon",
+            "before": 1,
+            "after": 0.5811774832739052
+          },
+          {
+            "kind": "bone",
+            "before": 1,
+            "after": 0.6079060407463142
+          },
+          {
+            "kind": "vessel",
+            "before": 1,
+            "after": 0.5811774832739052
+          }
+        ]
+      }
+    },
+    {
+      "tick": 100,
+      "timeS": 5,
+      "type": "physiology",
+      "actorId": "aldren",
+      "tags": [
+        "function_drop"
+      ],
+      "data": {
+        "tag": "LOCOMOTION",
+        "from": 1,
+        "to": 0.6955555218595804
+      }
+    },
+    {
+      "tick": 102,
+      "timeS": 5.1000000000000005,
+      "type": "commit",
+      "actorId": "aldren",
+      "targetId": "harvek",
+      "tags": [
+        "attack_commit"
+      ],
+      "data": {
+        "mode": "pommel",
+        "aim": "auto"
+      }
+    },
+    {
+      "tick": 102,
+      "timeS": 5.1000000000000005,
+      "type": "attack",
+      "actorId": "aldren",
+      "targetId": "harvek",
+      "tags": [
+        "attack_hit",
+        "armor_penetrate",
+        "wound"
+      ],
+      "data": {
+        "mode": "pommel",
+        "margin": 2,
+        "marginBand": "solid",
+        "partId": "l_thigh",
+        "zone": "low",
+        "sizeMod": 0,
+        "energy": 26.933795474696325,
+        "momentum": 8.684159563777586,
+        "penBand": "partial",
+        "penRatio": 1.063,
+        "transmitted": 10.91,
+        "bluntTrauma": 6.06,
+        "tissuesHit": [
+          {
+            "kind": "skin",
+            "before": 1,
+            "after": 0.511700361579497
+          },
+          {
+            "kind": "fat",
+            "before": 1,
+            "after": 0.511700361579497
+          },
+          {
+            "kind": "muscle",
+            "before": 1,
+            "after": 0.6225136915325333
+          },
+          {
+            "kind": "bone",
+            "before": 1,
+            "after": 0.9359826098049888
+          },
+          {
+            "kind": "nerve",
+            "before": 1,
+            "after": 0.8545575044366398
+          },
+          {
+            "kind": "vessel",
+            "before": 1,
+            "after": 0.8545575044366398
+          }
+        ],
+        "displacement": null,
+        "stagger": false
+      }
+    },
+    {
+      "tick": 102,
+      "timeS": 5.1000000000000005,
+      "type": "wound",
+      "actorId": "aldren",
+      "targetId": "harvek",
+      "tags": [
+        "wound"
+      ],
+      "data": {
+        "partId": "l_thigh",
+        "energy": 10.908187167252011,
+        "tissuesHit": [
+          {
+            "kind": "skin",
+            "before": 1,
+            "after": 0.511700361579497
+          },
+          {
+            "kind": "fat",
+            "before": 1,
+            "after": 0.511700361579497
+          },
+          {
+            "kind": "muscle",
+            "before": 1,
+            "after": 0.6225136915325333
+          },
+          {
+            "kind": "bone",
+            "before": 1,
+            "after": 0.9359826098049888
+          },
+          {
+            "kind": "nerve",
+            "before": 1,
+            "after": 0.8545575044366398
+          },
+          {
+            "kind": "vessel",
+            "before": 1,
+            "after": 0.8545575044366398
+          }
+        ]
+      }
+    },
+    {
+      "tick": 110,
+      "timeS": 5.5,
+      "type": "physiology",
+      "actorId": "harvek",
+      "tags": [
+        "function_drop"
+      ],
+      "data": {
+        "tag": "STANCE",
+        "from": 1,
+        "to": 0.8889620977403979
+      }
+    },
+    {
+      "tick": 110,
+      "timeS": 5.5,
+      "type": "physiology",
+      "actorId": "harvek",
+      "tags": [
+        "function_drop"
+      ],
+      "data": {
+        "tag": "LOCOMOTION",
+        "from": 1,
+        "to": 0.890719841619493
+      }
+    },
+    {
+      "tick": 110,
+      "timeS": 5.5,
+      "type": "commit",
+      "actorId": "aldren",
+      "targetId": "harvek",
+      "tags": [
+        "attack_commit"
+      ],
+      "data": {
+        "mode": "thrust",
+        "aim": "auto"
+      }
+    },
+    {
+      "tick": 110,
+      "timeS": 5.5,
+      "type": "miss",
+      "actorId": "aldren",
+      "targetId": "harvek",
+      "tags": [
+        "attack_miss"
+      ],
+      "data": {
+        "mode": "thrust",
+        "margin": -1,
+        "attackSuccesses": 1,
+        "defenseSuccesses": 2,
+        "attackPool": 4,
+        "defensePool": 4
+      }
+    },
+    {
+      "tick": 110,
+      "timeS": 5.5,
+      "type": "commit",
+      "actorId": "harvek",
+      "targetId": "aldren",
+      "tags": [
+        "attack_commit"
+      ],
+      "data": {
+        "mode": "thrust",
+        "aim": "auto"
+      }
+    },
+    {
+      "tick": 110,
+      "timeS": 5.5,
+      "type": "attack",
+      "actorId": "harvek",
+      "targetId": "aldren",
+      "tags": [
+        "attack_hit",
+        "armor_penetrate",
+        "wound"
+      ],
+      "data": {
+        "mode": "thrust",
+        "margin": 2,
+        "marginBand": "solid",
+        "partId": "l_thigh",
+        "zone": "low",
+        "sizeMod": 0,
+        "energy": 47.597352048215576,
+        "momentum": 10.688014077260442,
+        "penBand": "overwhelm",
+        "penRatio": 3.956,
+        "transmitted": 63.3,
+        "bluntTrauma": 3.33,
+        "tissuesHit": [
+          {
+            "kind": "skin",
+            "before": 1,
+            "after": 0.577179305701855
+          },
+          {
+            "kind": "fat",
+            "before": 1,
+            "after": 0.577179305701855
+          },
+          {
+            "kind": "muscle",
+            "before": 1,
+            "after": 0.6285844459139278
+          },
+          {
+            "kind": "bone",
+            "before": 1,
+            "after": 0.6053146293570224
+          },
+          {
+            "kind": "nerve",
+            "before": 1,
+            "after": 0.577179305701855
+          },
+          {
+            "kind": "vessel",
+            "before": 1,
+            "after": 0.577179305701855
+          }
+        ],
+        "displacement": null,
+        "stagger": false
+      }
+    },
+    {
+      "tick": 110,
+      "timeS": 5.5,
+      "type": "wound",
+      "actorId": "harvek",
+      "targetId": "aldren",
+      "tags": [
+        "wound"
+      ],
+      "data": {
+        "partId": "l_thigh",
+        "energy": 63.30447822412671,
+        "tissuesHit": [
+          {
+            "kind": "skin",
+            "before": 1,
+            "after": 0.577179305701855
+          },
+          {
+            "kind": "fat",
+            "before": 1,
+            "after": 0.577179305701855
+          },
+          {
+            "kind": "muscle",
+            "before": 1,
+            "after": 0.6285844459139278
+          },
+          {
+            "kind": "bone",
+            "before": 1,
+            "after": 0.6053146293570224
+          },
+          {
+            "kind": "nerve",
+            "before": 1,
+            "after": 0.577179305701855
+          },
+          {
+            "kind": "vessel",
+            "before": 1,
+            "after": 0.577179305701855
+          }
+        ]
+      }
+    },
+    {
+      "tick": 120,
+      "timeS": 6,
+      "type": "physiology",
+      "actorId": "aldren",
+      "tags": [
+        "function_drop"
+      ],
+      "data": {
+        "tag": "STANCE",
+        "from": 1,
+        "to": 0.6900095801962829
+      }
+    },
+    {
+      "tick": 120,
+      "timeS": 6,
+      "type": "commit",
+      "actorId": "aldren",
+      "targetId": "harvek",
+      "tags": [
+        "attack_commit"
+      ],
+      "data": {
+        "mode": "thrust",
+        "aim": "auto"
+      }
+    },
+    {
+      "tick": 120,
+      "timeS": 6,
+      "type": "miss",
+      "actorId": "aldren",
+      "targetId": "harvek",
+      "tags": [
+        "attack_miss"
+      ],
+      "data": {
+        "mode": "thrust",
+        "margin": 0,
+        "attackSuccesses": 1,
+        "defenseSuccesses": 1,
+        "attackPool": 4,
+        "defensePool": 4
+      }
+    },
+    {
+      "tick": 121,
+      "timeS": 6.050000000000001,
+      "type": "commit",
+      "actorId": "harvek",
+      "targetId": "aldren",
+      "tags": [
+        "attack_commit"
+      ],
+      "data": {
+        "mode": "thrust",
+        "aim": "auto"
+      }
+    },
+    {
+      "tick": 121,
+      "timeS": 6.050000000000001,
+      "type": "miss",
+      "actorId": "harvek",
+      "targetId": "aldren",
+      "tags": [
+        "attack_miss"
+      ],
+      "data": {
+        "mode": "thrust",
+        "margin": -2,
+        "attackSuccesses": 1,
+        "defenseSuccesses": 3,
+        "attackPool": 5,
+        "defensePool": 4
+      }
+    },
+    {
+      "tick": 130,
+      "timeS": 6.5,
+      "type": "commit",
+      "actorId": "aldren",
+      "targetId": "harvek",
+      "tags": [
+        "attack_commit"
+      ],
+      "data": {
+        "mode": "thrust",
+        "aim": "auto"
+      }
+    },
+    {
+      "tick": 130,
+      "timeS": 6.5,
+      "type": "attack",
+      "actorId": "aldren",
+      "targetId": "harvek",
+      "tags": [
+        "attack_hit",
+        "armor_penetrate",
+        "wound"
+      ],
+      "data": {
+        "mode": "thrust",
+        "margin": 2,
+        "marginBand": "solid",
+        "partId": "r_thigh",
+        "zone": "low",
+        "sizeMod": 0,
+        "energy": 36.65988828500332,
+        "momentum": 10.131519491073847,
+        "penBand": "overwhelm",
+        "penRatio": 40.747,
+        "transmitted": 43.01,
+        "bluntTrauma": 2.26,
+        "tissuesHit": [
+          {
+            "kind": "skin",
+            "before": 1,
+            "after": 0.6028129027044822
+          },
+          {
+            "kind": "fat",
+            "before": 1,
+            "after": 0.6028129027044822
+          },
+          {
+            "kind": "muscle",
+            "before": 1,
+            "after": 0.6377393019862947
+          },
+          {
+            "kind": "bone",
+            "before": 1,
+            "after": 0.6219289977846512
+          },
+          {
+            "kind": "nerve",
+            "before": 1,
+            "after": 0.6028129027044822
+          },
+          {
+            "kind": "vessel",
+            "before": 1,
+            "after": 0.6028129027044822
+          }
+        ],
+        "displacement": null,
+        "stagger": false
+      }
+    },
+    {
+      "tick": 130,
+      "timeS": 6.5,
+      "type": "wound",
+      "actorId": "aldren",
+      "targetId": "harvek",
+      "tags": [
+        "wound"
+      ],
+      "data": {
+        "partId": "r_thigh",
+        "energy": 43.011213930380144,
+        "tissuesHit": [
+          {
+            "kind": "skin",
+            "before": 1,
+            "after": 0.6028129027044822
+          },
+          {
+            "kind": "fat",
+            "before": 1,
+            "after": 0.6028129027044822
+          },
+          {
+            "kind": "muscle",
+            "before": 1,
+            "after": 0.6377393019862947
+          },
+          {
+            "kind": "bone",
+            "before": 1,
+            "after": 0.6219289977846512
+          },
+          {
+            "kind": "nerve",
+            "before": 1,
+            "after": 0.6028129027044822
+          },
+          {
+            "kind": "vessel",
+            "before": 1,
+            "after": 0.6028129027044822
+          }
+        ]
+      }
+    },
+    {
+      "tick": 132,
+      "timeS": 6.6000000000000005,
+      "type": "commit",
+      "actorId": "harvek",
+      "targetId": "aldren",
+      "tags": [
+        "attack_commit"
+      ],
+      "data": {
+        "mode": "thrust",
+        "aim": "auto"
+      }
+    },
+    {
+      "tick": 132,
+      "timeS": 6.6000000000000005,
+      "type": "attack",
+      "actorId": "harvek",
+      "targetId": "aldren",
+      "tags": [
+        "attack_hit",
+        "armor_penetrate",
+        "wound"
+      ],
+      "data": {
+        "mode": "thrust",
+        "margin": 3,
+        "marginBand": "clean",
+        "partId": "r_hand",
+        "zone": "middle",
+        "sizeMod": 0,
+        "energy": 47.597352048215576,
+        "momentum": 10.688014077260442,
+        "penBand": "overwhelm",
+        "penRatio": 3.887,
+        "transmitted": 63.3,
+        "bluntTrauma": 3.33,
+        "tissuesHit": [
+          {
+            "kind": "skin",
+            "before": 1,
+            "after": 0.577179305701855
+          },
+          {
+            "kind": "fat",
+            "before": 1,
+            "after": 0.577179305701855
+          },
+          {
+            "kind": "muscle",
+            "before": 1,
+            "after": 0.6285844459139278
+          },
+          {
+            "kind": "tendon",
+            "before": 1,
+            "after": 0.577179305701855
+          },
+          {
+            "kind": "bone",
+            "before": 1,
+            "after": 0.6053146293570224
+          },
+          {
+            "kind": "nerve",
+            "before": 1,
+            "after": 0.577179305701855
+          }
+        ],
+        "displacement": null,
+        "stagger": false
+      }
+    },
+    {
+      "tick": 132,
+      "timeS": 6.6000000000000005,
+      "type": "wound",
+      "actorId": "harvek",
+      "targetId": "aldren",
+      "tags": [
+        "wound"
+      ],
+      "data": {
+        "partId": "r_hand",
+        "energy": 63.30447822412671,
+        "tissuesHit": [
+          {
+            "kind": "skin",
+            "before": 1,
+            "after": 0.577179305701855
+          },
+          {
+            "kind": "fat",
+            "before": 1,
+            "after": 0.577179305701855
+          },
+          {
+            "kind": "muscle",
+            "before": 1,
+            "after": 0.6285844459139278
+          },
+          {
+            "kind": "tendon",
+            "before": 1,
+            "after": 0.577179305701855
+          },
+          {
+            "kind": "bone",
+            "before": 1,
+            "after": 0.6053146293570224
+          },
+          {
+            "kind": "nerve",
+            "before": 1,
+            "after": 0.577179305701855
+          }
+        ]
+      }
+    },
+    {
+      "tick": 132,
+      "timeS": 6.6000000000000005,
+      "type": "end",
+      "tags": [
+        "duel_end"
+      ],
+      "data": {
+        "winner": "harvek",
+        "reason": "rout",
+        "a": {
+          "id": "aldren",
+          "dead": false,
+          "incapacitated": false,
+          "morale": 18.129789719532145,
+          "moraleBand": "routing",
+          "functions": {
+            "STANCE": 0.6900095801962829,
+            "GRASP": 0.6928900152112318,
+            "LOCOMOTION": 0.6814105654393707,
+            "SIGHT": 1,
+            "BREATHING": 0.5591496102125028,
+            "CIRCULATION": 0.5745101296044686,
+            "CONSCIOUSNESS": 1
+          }
+        },
+        "b": {
+          "id": "harvek",
+          "dead": false,
+          "incapacitated": false,
+          "morale": 57.821171908163215,
+          "moraleBand": "steady",
+          "functions": {
+            "STANCE": 0.8889620977403979,
+            "GRASP": 0.8420768906185394,
+            "LOCOMOTION": 0.890719841619493,
+            "SIGHT": 1,
+            "BREATHING": 1,
+            "CIRCULATION": 0.7551200962474481,
+            "CONSCIOUSNESS": 1
+          }
+        }
+      }
+    }
+  ],
+  "summaryLines": [
+    "[  0.00s] commit (aldren → harvek): {\"mode\":\"pommel\",\"aim\":\"auto\"}",
+    "[  0.00s] miss (aldren → harvek): pommel margin=-1",
+    "[  0.00s] commit (harvek → aldren): {\"mode\":\"thrust\",\"aim\":\"auto\"}",
+    "[  0.00s] miss (harvek → aldren): thrust margin=0",
+    "[  0.40s] commit (aldren → harvek): {\"mode\":\"pommel\",\"aim\":\"auto\"}",
+    "[  0.40s] miss (aldren → harvek): pommel margin=-2",
+    "[  0.55s] commit (harvek → aldren): {\"mode\":\"thrust\",\"aim\":\"auto\"}",
+    "[  0.55s] attack (harvek → aldren): thrust @ l_hand margin=1 band=graze pen=overwhelm",
+    "[  0.55s] wound (harvek → aldren): l_hand energy=60.1 tissues=[{\"kind\":\"skin\",\"before\":1,\"after\":0.5811774832739052},{\"kind\":\"fat\",\"before\":1,\"after\":0.5811774832739052},{\"kind\":\"muscle\",\"before\":1,\"after\":0.6300123664753743},{\"kind\":\"tendon\",\"before\":1,\"after\":0.5811774832739052},{\"kind\":\"bone\",\"before\":1,\"after\":0.6079060407463142},{\"kind\":\"nerve\",\"before\":1,\"after\":0.5811774832739052}]",
+    "[  0.80s] commit (aldren → harvek): {\"mode\":\"pommel\",\"aim\":\"auto\"}",
+    "[  0.80s] attack (aldren → harvek): pommel @ abdomen margin=3 band=clean pen=nearPenet",
+    "[  0.80s] wound (aldren → harvek): abdomen energy=3.6 tissues=[{\"kind\":\"skin\",\"before\":1,\"after\":0.44999999999999996},{\"kind\":\"fat\",\"before\":1,\"after\":0.44999999999999996},{\"kind\":\"muscle\",\"before\":1,\"after\":0.9347128130943115},{\"kind\":\"bone\",\"before\":1,\"after\":0.9095024472050204},{\"kind\":\"vessel\",\"before\":1,\"after\":0.7672920070986238},{\"kind\":\"organ\",\"before\":1,\"after\":0.676794454303644}]",
+    "[  1.10s] commit (harvek → aldren): {\"mode\":\"thrust\",\"aim\":\"auto\"}",
+    "[  1.10s] miss (harvek → aldren): thrust margin=0",
+    "[  1.20s] commit (aldren → harvek): {\"mode\":\"pommel\",\"aim\":\"auto\"}",
+    "[  1.20s] miss (aldren → harvek): pommel margin=-1",
+    "[  1.60s] commit (aldren → harvek): {\"mode\":\"thrust\",\"aim\":\"auto\"}",
+    "[  1.60s] miss (aldren → harvek): thrust margin=0",
+    "[  1.65s] commit (harvek → aldren): {\"mode\":\"thrust\",\"aim\":\"auto\"}",
+    "[  1.65s] miss (harvek → aldren): thrust margin=0",
+    "[  2.10s] commit (aldren → harvek): {\"mode\":\"pommel\",\"aim\":\"auto\"}",
+    "[  2.10s] miss (aldren → harvek): pommel margin=0",
+    "[  2.20s] commit (harvek → aldren): {\"mode\":\"thrust\",\"aim\":\"auto\"}",
+    "[  2.20s] miss (harvek → aldren): thrust margin=0",
+    "[  2.50s] commit (aldren → harvek): {\"mode\":\"pommel\",\"aim\":\"auto\"}",
+    "[  2.50s] miss (aldren → harvek): pommel margin=0",
+    "[  2.75s] commit (harvek → aldren): {\"mode\":\"thrust\",\"aim\":\"auto\"}",
+    "[  2.75s] miss (harvek → aldren): thrust margin=-2",
+    "[  2.90s] commit (aldren → harvek): {\"mode\":\"pommel\",\"aim\":\"auto\"}",
+    "[  2.90s] miss (aldren → harvek): pommel margin=0",
+    "[  3.30s] commit (aldren → harvek): {\"mode\":\"pommel\",\"aim\":\"auto\"}",
+    "[  3.30s] attack (aldren → harvek): pommel @ l_upper_arm margin=1 band=graze pen=nearPenet",
+    "[  3.30s] wound (aldren → harvek): l_upper_arm energy=3.5 tissues=[{\"kind\":\"skin\",\"before\":1,\"after\":0.44999999999999996},{\"kind\":\"fat\",\"before\":1,\"after\":0.44999999999999996},{\"kind\":\"muscle\",\"before\":1,\"after\":0.9461404377457184},{\"kind\":\"bone\",\"before\":1,\"after\":0.9140273248447693},{\"kind\":\"nerve\",\"before\":1,\"after\":0.7789274067436925},{\"kind\":\"vessel\",\"before\":1,\"after\":0.7789274067436925}]",
+    "[  3.30s] commit (harvek → aldren): {\"mode\":\"thrust\",\"aim\":\"auto\"}",
+    "[  3.30s] miss (harvek → aldren): thrust margin=-3",
+    "[  3.70s] commit (aldren → harvek): {\"mode\":\"pommel\",\"aim\":\"auto\"}",
+    "[  3.70s] miss (aldren → harvek): pommel margin=0",
+    "[  3.85s] commit (harvek → aldren): {\"mode\":\"thrust\",\"aim\":\"auto\"}",
+    "[  3.85s] attack (harvek → aldren): thrust @ chest margin=1 band=graze pen=overwhelm",
+    "[  3.85s] wound (harvek → aldren): chest energy=60.1 tissues=[{\"kind\":\"skin\",\"before\":1,\"after\":0.5811774832739052},{\"kind\":\"fat\",\"before\":1,\"after\":0.5811774832739052},{\"kind\":\"muscle\",\"before\":1,\"after\":0.6191601702083811},{\"kind\":\"bone\",\"before\":1,\"after\":0.6017514386967463},{\"kind\":\"organ\",\"before\":1,\"after\":0.44999999999999996},{\"kind\":\"organ\",\"before\":1,\"after\":0.44999999999999996},{\"kind\":\"vessel\",\"before\":1,\"after\":0.5811774832739052}]",
+    "[  4.10s] commit (aldren → harvek): {\"mode\":\"thrust\",\"aim\":\"auto\"}",
+    "[  4.10s] miss (aldren → harvek): thrust margin=-2",
+    "[  4.40s] commit (harvek → aldren): {\"mode\":\"thrust\",\"aim\":\"auto\"}",
+    "[  4.40s] miss (harvek → aldren): thrust margin=-2",
+    "[  4.60s] commit (aldren → harvek): {\"mode\":\"thrust\",\"aim\":\"auto\"}",
+    "[  4.60s] miss (aldren → harvek): thrust margin=-1",
+    "[  4.95s] commit (harvek → aldren): {\"mode\":\"thrust\",\"aim\":\"auto\"}",
+    "[  4.95s] attack (harvek → aldren): thrust @ l_lower_leg margin=1 band=graze pen=overwhelm",
+    "[  4.95s] wound (harvek → aldren): l_lower_leg energy=60.1 tissues=[{\"kind\":\"skin\",\"before\":1,\"after\":0.5811774832739052},{\"kind\":\"fat\",\"before\":1,\"after\":0.5811774832739052},{\"kind\":\"muscle\",\"before\":1,\"after\":0.6300123664753743},{\"kind\":\"tendon\",\"before\":1,\"after\":0.5811774832739052},{\"kind\":\"bone\",\"before\":1,\"after\":0.6079060407463142},{\"kind\":\"vessel\",\"before\":1,\"after\":0.5811774832739052}]",
+    "[  5.10s] commit (aldren → harvek): {\"mode\":\"pommel\",\"aim\":\"auto\"}",
+    "[  5.10s] attack (aldren → harvek): pommel @ l_thigh margin=2 band=solid pen=partial",
+    "[  5.10s] wound (aldren → harvek): l_thigh energy=10.9 tissues=[{\"kind\":\"skin\",\"before\":1,\"after\":0.511700361579497},{\"kind\":\"fat\",\"before\":1,\"after\":0.511700361579497},{\"kind\":\"muscle\",\"before\":1,\"after\":0.6225136915325333},{\"kind\":\"bone\",\"before\":1,\"after\":0.9359826098049888},{\"kind\":\"nerve\",\"before\":1,\"after\":0.8545575044366398},{\"kind\":\"vessel\",\"before\":1,\"after\":0.8545575044366398}]",
+    "[  5.50s] commit (aldren → harvek): {\"mode\":\"thrust\",\"aim\":\"auto\"}",
+    "[  5.50s] miss (aldren → harvek): thrust margin=-1",
+    "[  5.50s] commit (harvek → aldren): {\"mode\":\"thrust\",\"aim\":\"auto\"}",
+    "[  5.50s] attack (harvek → aldren): thrust @ l_thigh margin=2 band=solid pen=overwhelm",
+    "[  5.50s] wound (harvek → aldren): l_thigh energy=63.3 tissues=[{\"kind\":\"skin\",\"before\":1,\"after\":0.577179305701855},{\"kind\":\"fat\",\"before\":1,\"after\":0.577179305701855},{\"kind\":\"muscle\",\"before\":1,\"after\":0.6285844459139278},{\"kind\":\"bone\",\"before\":1,\"after\":0.6053146293570224},{\"kind\":\"nerve\",\"before\":1,\"after\":0.577179305701855},{\"kind\":\"vessel\",\"before\":1,\"after\":0.577179305701855}]",
+    "[  6.00s] commit (aldren → harvek): {\"mode\":\"thrust\",\"aim\":\"auto\"}",
+    "[  6.00s] miss (aldren → harvek): thrust margin=0",
+    "[  6.05s] commit (harvek → aldren): {\"mode\":\"thrust\",\"aim\":\"auto\"}",
+    "[  6.05s] miss (harvek → aldren): thrust margin=-2",
+    "[  6.50s] commit (aldren → harvek): {\"mode\":\"thrust\",\"aim\":\"auto\"}",
+    "[  6.50s] attack (aldren → harvek): thrust @ r_thigh margin=2 band=solid pen=overwhelm",
+    "[  6.50s] wound (aldren → harvek): r_thigh energy=43.0 tissues=[{\"kind\":\"skin\",\"before\":1,\"after\":0.6028129027044822},{\"kind\":\"fat\",\"before\":1,\"after\":0.6028129027044822},{\"kind\":\"muscle\",\"before\":1,\"after\":0.6377393019862947},{\"kind\":\"bone\",\"before\":1,\"after\":0.6219289977846512},{\"kind\":\"nerve\",\"before\":1,\"after\":0.6028129027044822},{\"kind\":\"vessel\",\"before\":1,\"after\":0.6028129027044822}]",
+    "[  6.60s] commit (harvek → aldren): {\"mode\":\"thrust\",\"aim\":\"auto\"}",
+    "[  6.60s] attack (harvek → aldren): thrust @ r_hand margin=3 band=clean pen=overwhelm",
+    "[  6.60s] wound (harvek → aldren): r_hand energy=63.3 tissues=[{\"kind\":\"skin\",\"before\":1,\"after\":0.577179305701855},{\"kind\":\"fat\",\"before\":1,\"after\":0.577179305701855},{\"kind\":\"muscle\",\"before\":1,\"after\":0.6285844459139278},{\"kind\":\"tendon\",\"before\":1,\"after\":0.577179305701855},{\"kind\":\"bone\",\"before\":1,\"after\":0.6053146293570224},{\"kind\":\"nerve\",\"before\":1,\"after\":0.577179305701855}]",
+    "[  6.60s] end: winner=harvek reason=rout"
+  ]
+}

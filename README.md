@@ -30,6 +30,8 @@ npm install
 npm run duel
 npm run duel -- --seed 99
 npm run duel -- --seed=7 --max-seconds=120
+npm run duel -- --out path/to/fight.json
+npm run duel -- --no-save
 ```
 
 Stock fighters:
@@ -38,6 +40,23 @@ Stock fighters:
 - **Harvek** — spear, mail, STR-leaning
 
 Fight ends on death, incapacitation, or rout (morale &lt; 20).
+
+### Fight log (for narrator AI)
+
+Every duel builds a **narrative fight log** (`autonomous-combat-sim.fight-log.v1`) and saves it under `logs/` by default (timestamped), or to `--out <path>`.
+
+The JSON includes:
+
+- `narratorInstructions` — contract: simulation is truth; do not invent outcomes
+- `cast` — starting fighters, weapons, armor, attributes
+- `setting` — map context
+- `beatSheet` — condensed chronological beats for prompting
+- `timeline` — full `CombatEvent` stream
+- `outcome` / `finalStates` — who won and why, end physiology
+
+Example committed sample: [`docs/examples/duel-seed42.fight-log.json`](docs/examples/duel-seed42.fight-log.json)
+
+Hand that file to any LLM with a prompt like: *Narrate this fight using only the log; do not invent hits or wounds.*
 
 ## Architecture
 
@@ -81,7 +100,7 @@ src/
 | Melee weapons (cut/thrust/pommel/bash/stab) | Implemented |
 | Ranged (thrown/missile) | **STUB** — throws if forced |
 | Advancement / XP spend | Formula only |
-| Narrative prose | Events + tags only |
+| Narrative prose | Fight-log JSON for narrator AI; prose generation separate |
 | Formations / multi-combatant tactics | Not in MVP |
 
 Numbers marked **CALIB** in source/docs are placeholders pending playtest.
